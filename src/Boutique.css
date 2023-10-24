@@ -1,0 +1,62 @@
+
+.col-md-6{
+    
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.text-box{
+   
+    height: 400px;
+    width: 400px;
+   
+   
+}
+.headin{
+    font-size: 3.6rem;
+    line-height: 2;
+    letter-spacing: -.056rem;
+    font-family: HelveticaNeueLTCom-UltLt;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.latest{
+    font-family: TimesNow-ExtraLightItalic;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: .83;
+    letter-spacing: -.12rem;
+    box-sizing: border-box;
+}
+
+
+.text-box a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    line-height: 6;
+    font-size: large;
+
+}
+.second{
+    /* overflow: hidden; */
+    height: 600px;
+    width: 1000px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+.subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-box a:hover{
+    color: black;
+  cursor: pointer;
+  transform: scale(1.4);
+}

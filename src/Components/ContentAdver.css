@@ -1,0 +1,46 @@
+.texet{
+width: 500px;
+height: 500px;
+margin-left: 100px;
+
+
+}
+.texet h2{
+    font-size: 2.6rem;
+    line-height: 1;
+    letter-spacing: -.056rem;
+    font-family: HelveticaNeueLTCom-UltLt;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+}
+.texet p{
+    font-size: 1.1rem;
+    line-height: 1.35;
+    letter-spacing: .026rem;
+    color: white;
+}
+.texet a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+   color: white;
+    transition: transform 0.8s, color 0.3s;
+    
+}
+.texet a:hover{
+    
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.cantainer{
+    height: 600px;
+    width: auto;
+    display: flex;
+    align-items: end;
+   
+    
+    background-color: black;
+    overflow: hidden;
+    
+}

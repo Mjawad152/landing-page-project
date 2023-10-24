@@ -1,0 +1,171 @@
+
+.mainNav{
+  
+  display: flex;
+ justify-content: space-between; 
+ padding: 17px 20px;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 2;
+opacity: "0";
+background-color: none;
+}
+.navbar{
+  background-color: transparent;
+  background-color: white;
+}
+  .navbar-left a:hover{
+    text-decoration: underline;
+    transform: scale(1.4);
+    color: white;
+    
+  }
+
+  
+  .navbar-left {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  
+  .navbar-left a {
+    padding-left: 2rem;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: large;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    width: 10px; 
+    height: 10px;
+    margin-right: 50rem;
+    margin-left: 190px;
+   
+  }
+  .logo img{
+    padding-top: 110px;
+    height: 500px;
+    width: 900px;
+    filter: invert(1);
+    
+    
+  }
+  .logo img:hover{
+    cursor: pointer;
+  }
+  
+ .login-button {
+    
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+    margin-right: 10px;    
+    
+  }
+  
+ .login-button:hover{
+  color: white;
+  cursor: pointer;
+  transform: scale(1.4);
+ }
+
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    outline: none;
+    z-index: 5;
+    display: inline;
+  }
+ 
+  
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(1px, 4px);
+  }
+  
+  .open .bar:nth-child(2) {
+    transform: rotate(-45deg) translate(2px, -5px);
+  }
+ 
+  .righ{
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: large;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+    
+   
+  }
+  .righ:hover{
+    color: white;
+    text-decoration: underline;
+    transform: scale(1.4);
+    
+  }
+  .nav:hover {
+    color: white;
+  }
+
+
+
+ 
+
+
+
+/* CustomNavbar.css */
+@media (max-width: 1500px) {
+  .navbar-right {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

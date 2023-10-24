@@ -1,0 +1,149 @@
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 5fr; 
+        grid-template-rows: auto; 
+      
+        /* gap: 10px;  */
+        /* height: 300px;  */
+      }
+      
+      .upper-row {
+        grid-column: 1 / span 2; 
+        background-color: #3498db;
+        color: white;
+       
+        text-align: center;
+      }
+      
+      .left-column {
+        background-color: #031123;
+       
+      }
+      
+      .right-column {
+        background-color: #031123;
+       
+      }
+    .form-control{
+        background-color: #354585;
+        height: 44px;
+        padding: 0 20px;
+        
+        border-radius: 8px;
+        border: 1px solid #354585;
+        width: 100%;
+        transition: .3s ease-in-out;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .field-label{
+        
+        color: #8D8D99;
+        width: fit-content;
+    }
+      
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+    .dash{
+        width: 250px;
+        height: 88vh;
+       
+        padding: 40px;
+       
+    }
+    .dash button{
+        margin: 15px;
+        width: 180px;
+    }
+    .grid{
+    border: 2px solid black;
+    width: 810px;
+    height: 390px;
+    display: flex;
+    
+    }
+    .imbox{
+        display: grid;
+        display: inline-block;
+        height: 300px;
+        width: 300px;
+        border: 2px solid black;
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    #imbxl{
+        top: 40%;
+        right: 17.5%;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        padding: 13px;
+       
+      }
+    
+      .imbo {
+        width: 150px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+       
+      }
+    
+
+      
+    
+    
+ 
+     
+    .cantainer{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-gap: 0.7rem;
+        }
+        .items{
+            height: 400px;
+            width: 820px;
+        border: 2px solid black;
+        }
+ 
+   
+        .sub-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            margin: 10px;
+        }
+       .sub-b{
+        padding: 10px;
+        /* border-radius: 100px; */
+       }
+   
+      
+    
+      
+          
+          

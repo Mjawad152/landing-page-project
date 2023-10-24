@@ -1,0 +1,36 @@
+.fullform{
+    background-color: black;
+}
+.card{
+    display: inline-block;
+    margin: 20px;
+    width: 18rem;
+    border-radius: 20px;
+}
+.slide{
+    display: flex;
+    justify-content: center;
+}
+.card-title{
+    text-decoration: none;
+}
+.card-title:hover{
+    cursor: pointer;
+    
+}
+.card-body{
+    background-color: black;
+    color: white;
+    
+}
+.heading{
+    /* margin: 50px; */
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.card-img-top{
+    height: 400px;
+    width: 400px;
+}

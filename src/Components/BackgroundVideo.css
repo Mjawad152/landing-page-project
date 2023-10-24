@@ -1,0 +1,45 @@
+.tex{
+  width: 400px;
+}
+.tex h1 {
+  font-family: HelveticaNeueLTCom-UltLt;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+}
+.tex p{
+  font-family: HelveticaNeueLTCom;
+  font-weight: 400;
+}
+.tex a{
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+
+
+.tex a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  
+  position: relative;
+}
+
+
+.tex a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px; 
+  background-color: #ff6600; 
+  transition: width 0.3s;
+}
+
+
+.tex a:hover::before {
+  width: 10px; 
+}

@@ -73,6 +73,7 @@ import React, { useState, useEffect } from 'react';
 import './CustomNavbar.css';
 import { RiAdminFill } from "react-icons/ri";
 import { FaSearch } from "react-icons/fa";
+import { GiShoppingCart } from "react-icons/gi";
 import { Link } from 'react-router-dom';
 import BackgroundVideo from './BackgroundVideo';
 import Products from './Carosel';
@@ -81,6 +82,13 @@ import Advertise from './Advertise';
 import TopProduct from './TopProduct';
 import Footer from './Footer';
 import Boutique from '../Boutique';
+import { useCart } from './CartContext';
+
+
+
+
+
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -107,6 +115,13 @@ const Navbar = () => {
     };
   }, []);
 
+  const { cartState } = useCart();
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    setCartCount(cartState.cartItems.length); 
+  }, [cartState.cartItems]);
+
   return (
     <div>
       <div className='mainNav' style={{ justifyContent: 'space-between' }}>
@@ -125,8 +140,8 @@ const Navbar = () => {
             <img src="https://o.remove.bg/downloads/5823f09c-c0d2-4049-828a-44ab3b8548bd/Untitled__2_-removebg-preview.png" alt="Logo" />
           </div>
           <div className="navbar-right">
-            <Link to="/yourcart" className='righ' id='ri'>Cart</Link>
             <Link to="/Boutique" className='righ'>Boutiques</Link>
+            <Link to="/yourcart" className='righ' id='shopcart'> <GiShoppingCart/> <span className="badge text-bg-secondary">{cartCount}</span></Link>
             <Link to="/AdminDashboard" className="login-button" style={{ color: 'white', fontSize: '1.5em' }}>
               <RiAdminFill />
             </Link>

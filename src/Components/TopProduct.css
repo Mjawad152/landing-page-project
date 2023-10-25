@@ -1,13 +1,15 @@
 .card{
 border-radius: 10px;
+padding: 40px;
+align-items: center;
 }
-.car-img{
+.card-img{
     box-sizing: border-box;
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
-.product-heading {
+.heading {
     color: white;
     text-align: center;
     padding: 30px;

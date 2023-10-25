@@ -18,7 +18,7 @@ import EditProduct from './Components/EditProduct';
 import ProductsGrid from './Components/ProductsGrid';
 import { Carousel } from 'bootstrap';
 import Carosel from './Components/Carosel';
-import YourCart from './Components/YourCart';
+import YourCart from './Components/Cart';
 
 
 
@@ -42,7 +42,7 @@ function App() {
           <Route path='/AdminDashboard/edit' element={<AdminDashboard type="edit"/>}/>
           <Route path='/AdminDashboard/productgrid' element={<AdminDashboard type="productgrid"/>}/>
           
-        
+          
           
         </Routes>
       </Router>
@@ -59,21 +59,6 @@ function App() {
 
 export default App;
 
-// function App(){
-//   return(
-//     <>
 
-    {/* <TopProduct/>
-    <CustomNavbar/>
-    <TopProduct/>
-    <Products/>
-    <ContentAdver/>
-    <Advertise/>
-    <Boutique/>
-    <Footer/> */}
-    {/* <Dashboard/> */}
 
-//     </>
-//   );
-// }
-// export default App;
+

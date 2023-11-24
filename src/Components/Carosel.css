@@ -1,24 +1,19 @@
-.container-fluid{
-    /* border: 2px solid black; */
-}
-.row{
-    /* border: 2px solid black; */
-}
+
 .col-md-6{
-    border: 2px solid black; 
+   
     display: flex;
    justify-content: center;
    align-items: center;
 }
 
 .text-box{
-    /* border: 2px solid black;  */
+ 
     height: 400px;
     width: 400px;
    
    
 }
-.headin{
+.our{
     font-size: 3.6rem;
     line-height: 1;
     letter-spacing: -.056rem;
@@ -27,7 +22,7 @@
     text-transform: uppercase;
     color: white;
 }
-.latest{
+.latestt{
     font-family: TimesNow-ExtraLightItalic;
     font-weight: 50;
     font-size: 6rem;

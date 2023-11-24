@@ -1,5 +1,6 @@
 import React from 'react'
 import './Boutique.css'
+
 export default function Boutique() {
   return (
     <div>
@@ -11,7 +12,7 @@ export default function Boutique() {
           <h3 className='headin' style={{color:'black'}}>FIND A</h3>
           <h3 className='latest' style={{color:'black'}}>BOUTIQUE</h3>
           
-          <a href="">Explore All Boutiques</a>
+          <a href="" style={{color:"black"}}>Explore All Boutiques</a>
           </div>
         </div>
 <div className='second'>
@@ -49,6 +50,7 @@ Be the first to receive the latest news on our brand, products and upcoming even
 
 
 </div>
+
 
 
 

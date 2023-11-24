@@ -1,5 +1,5 @@
 import React from 'react'
-import "./.css"
+
 import { top_sellers } from './TopProduct'; 
 
 export default function Products() {
@@ -10,6 +10,8 @@ export default function Products() {
   return (
 
       <div>
+
+
     {top_sellers.map((product) => (
 
 <div class="card" style={{width: "18rem"}}>

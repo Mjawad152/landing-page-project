@@ -1,0 +1,31 @@
+
+
+  
+  .store-details,
+  .contact-form {
+    width: 41rem; 
+  }
+  .form-control{
+   background-color: white;
+   
+   border: none;
+   border-bottom: 1px solid #000;
+   border-radius: 0;
+   
+  }
+  .form-select{
+    border: none;
+   border-bottom: 1px solid #000;
+   border-radius: 0;
+   margin-top: 0.45rem;
+  }
+  .form-label{
+    margin-top: 2rem;
+  }
+  .contactus{
+    font-size: xx-large;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  

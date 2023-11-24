@@ -26,7 +26,7 @@ const BackgroundVideo = () => {
         color:'white'
       }}>
         <div className='tex'>
-        <h1>Antique Items Limited</h1>
+        <h1>Vintage Items Limited</h1>
         <p>Antique items promotion: Discover the timeless beauty of history with our exquisite collection of meticulously curated antiques.Unlock the allure of the past and adorn your space with unique antique treasures during our exclusive antique items promotion.</p>
         <a href="#" class="discover-button">Discover More</a>
 

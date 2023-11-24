@@ -19,7 +19,14 @@ import ProductsGrid from './Components/ProductsGrid';
 import { Carousel } from 'bootstrap';
 import Carosel from './Components/Carosel';
 import YourCart from './Components/Cart';
-
+import CustomerDetail from './Components/CustomerDetail';
+import Payment from './Components/Payment';
+import PicText from './Components/PicText'
+import Cart from './Components/Cart';
+import ContactUs from './Components/ContactUs';
+import Aboutus from './Components/Aboutus';
+import Test from './Test';
+import YourComponent from './Components/YourComponent';
 
 
 
@@ -28,30 +35,34 @@ import YourCart from './Components/Cart';
 function App() {
     return (
 
-      <>
-      <Router>
+      <div>
+      <YourComponent/>
+     
+      {/* <Router>
        <Routes>
           
           <Route path='/' element={<CustomNavbar/>}/>
           
-          <Route path='/Shop' element={<Carosel/>}/>
+          <Route path='/Shop' element={<TopProduct/>}/>
           <Route path='/Contact' element={<Footer/>}/>
           <Route path='/yourcart' element={<YourCart/>}/>
           <Route path='Boutique' element={<Boutique/>}/>
           <Route path='/AdminDashboard' element={<AdminDashboard />}/>
           <Route path='/AdminDashboard/edit' element={<AdminDashboard type="edit"/>}/>
           <Route path='/AdminDashboard/productgrid' element={<AdminDashboard type="productgrid"/>}/>
-          
-          
-          
+          <Route path='/Payment' element={<Payment/>}/>
+          <Route path='/CustomerDetail' element={<CustomerDetail/>}/>
+          <Route path='/Cart' element={<Cart/>}/>
+          <Route path='/Contactus' element={<ContactUs/>}/>
+          <Route path='/Aboutus' element={<Aboutus/>}/>
         </Routes>
-      </Router>
+      </Router> */}
 
 
 
 
 
-      </>
+      </div>
      
     );
 

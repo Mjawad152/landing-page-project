@@ -307,7 +307,8 @@ function TopProduct() {
  
 
   return (
-    <div style={{ backgroundColor: "black" }}>
+    <div style={{backgroundColor:"black"}}>
+    <div  style={{ backgroundColor: "black",width:"80vw",margin:"0 auto" }}>
       <h2 className="heading">Top Sellers</h2>
 
       {topSellers.map((product) => (
@@ -334,6 +335,7 @@ function TopProduct() {
         </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

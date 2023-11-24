@@ -1,0 +1,34 @@
+#text{
+    color: #486dac;
+    line-height: 1.125;
+    font-size: 3.125em;
+    font-family: "Lora",serif;
+    text-transform: uppercase;
+}
+.head2{
+    color: #486dac;
+    line-height: 1.125;
+    font-size: 3.125em;
+    font-family: "Lora",serif;
+    text-transform: uppercase;
+
+}
+.paragrahh{
+    line-height: 1.5;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+.found{
+    line-height: 1.125;
+    font-size: 2.125em;
+    font-family: "Lora",serif;
+    text-transform: uppercase;
+}
+h1{
+    
+    color: antiquewhite;
+    line-height: 1.125;
+    font-size: 3.125em;
+    font-family: "Lora",serif;
+    text-transform: uppercase;
+}

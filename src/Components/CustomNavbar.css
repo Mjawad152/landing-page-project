@@ -41,22 +41,26 @@ background-color: none;
     display: inline-block;
   }
   
-  .logo {
-    display: flex;
+  .logo-container {
+    /* display: flex;
     justify-content: unset;
-    align-items: center;
-    width: 10px; 
-    height: 10px;
-    margin-right: 50rem;
-    margin-left: 190px;
-   
+    align-items: center; */
+     
+    height: 5rem;
+    overflow: hidden;
+    /* margin-right: 50rem;
+    margin-left: 190px; */
+  
   }
-  .logo img{
-    padding-top: 110px;
+
+  .centered-logo{
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
     height: 500px;
     width: 900px;
     filter: invert(1);
-    
+    margin-top: -3rem;
     
   }
   .logo img:hover{

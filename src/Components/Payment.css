@@ -1,0 +1,21 @@
+#backto{
+    width: 200px;
+    height: 60px;
+    
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 26px;
+    
+    color: #3441a2;
+}
+#proceed{
+    width: 200px;
+    height: 80px;
+    
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 26px;
+    color: #3441a2;
+}

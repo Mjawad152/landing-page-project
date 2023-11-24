@@ -1,7 +1,7 @@
 .texet{
-width: 500px;
+width: 800px;
 height: 500px;
-margin-left: 100px;
+margin-left: 20rem;
 
 
 }
@@ -34,7 +34,7 @@ margin-left: 100px;
   transform: scale(1.1);
 }
 .cantainer{
-    height: 600px;
+    height: 300px;
     width: auto;
     display: flex;
     align-items: end;

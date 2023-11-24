@@ -1,0 +1,41 @@
+.form-control{
+    background-color: aliceblue;
+}
+.col-form-label{
+    margin-left: 120px ;
+    padding: 25px 40px;
+   
+}
+.form-control-lg{
+    
+    margin-top: 20px;
+}
+.form-select-sm{
+   
+    padding: 15px 60px;
+    margin-top: 15px;
+}
+.dropdown-toggle{
+   
+    padding: 15px 60px;
+    margin-top: 15px;
+}
+.form-check{
+   
+   padding: 10px;
+   margin-left: 150px;
+}
+.sign{
+    margin-left: 10rem;
+    
+}
+#billing{
+    padding: 10px;
+    margin-top: 2rem;
+}
+.pric{
+    margin-top: 1.4rem;
+    margin-left: 7rem;
+    font-size: x-large;
+    
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCart } from "./CartContext";
-
+import { Link } from 'react-router-dom'
 function Cart() {
   const { cartState } = useCart();
   const [cartItems, setCartItems] = useState(cartState.cartItems);
@@ -52,7 +52,9 @@ function Cart() {
           
 
         ))}
-      
+        <div className="d-flex justify-content-center" >
+        <button className="btn btn-primary"><Link to="/CustomerDetail" style={{color:"white",textDecoration:"none"}}>Check out</Link></button>
+        </div>
     </div>
    
   );

@@ -19,13 +19,13 @@ export function TopSellersProvider({ children }) {
                     price: "$30.00",
                     imageUrl: "https://images.pexels.com/photos/18483756/pexels-photo-18483756/free-photo-of-vintage-items-displayed-in-a-shop.jpeg?auto=compress&cs=tinysrgb&w=1600",
                    },
-                  {
-                    id: 3,
-                    name: "Patio bar set",
-                    description: "vidaXL 3 Piece Bistro   ",
-                    price: "$2650.00",
-                    imageUrl: "https://images.pexels.com/photos/18480226/pexels-photo-18480226/free-photo-of-antique-chair-in-a-living-room.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                  },
+                  // {
+                  //   id: 3,
+                  //   name: "Patio bar set",
+                  //   description: "vidaXL 3 Piece Bistro   ",
+                  //   price: "$2650.00",
+                  //   imageUrl: "https://images.pexels.com/photos/18480226/pexels-photo-18480226/free-photo-of-antique-chair-in-a-living-room.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                  // },
                   {
                     id: 4,
                     name: "Wintage Pocket Watch",
@@ -75,13 +75,13 @@ export function TopSellersProvider({ children }) {
                     price: "$2650.00",
                     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VwqXxAbM5XK03h3hBr8o5TUSFOBNs3sNWQ&usqp=CAU",
                   },
-                  {
-                    id: 11,
-                    name: "Wintage Pocket Watch",
-                    description: "vidaXL 3 Piece Bistro   ",
-                    price: "$2650.00",
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VwqXxAbM5XK03h3hBr8o5TUSFOBNs3sNWQ&usqp=CAU",
-                  },
+                  // {
+                  //   id: 11,
+                  //   name: "Wintage Pocket Watch",
+                  //   description: "vidaXL 3 Piece Bistro   ",
+                  //   price: "$2650.00",
+                  //   imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VwqXxAbM5XK03h3hBr8o5TUSFOBNs3sNWQ&usqp=CAU",
+                  // },
   ]);
 
   return (
@@ -93,8 +93,6 @@ export function TopSellersProvider({ children }) {
 
 export function useTopSellers() {
   const context = useContext(TopSellersContext);
-  if (!context) {
-    throw new Error("useTopSellers must be used within a TopSellersProvider");
-  }
+  
   return context;
 }

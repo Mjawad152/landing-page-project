@@ -83,16 +83,16 @@ import TopProduct from './TopProduct';
 import Footer from './Footer';
 import Boutique from '../Boutique';
 import { useCart } from './CartContext';
-
-
-
-
-
+import PicText from './PicText';
+import ReactPlayer from 'react-player';
+import './BackgroundVideo.css'
 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [prevScrollpos, setPrevScrollpos] = useState(window.scrollY);
+  const [navbarTop, setNavbarTop] = useState(0);
+  const [navbarBackground, setNavbarBackground] = useState('transparent');
  
   const closeMenu = () => {
     setMenuOpen(false);
@@ -113,7 +113,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [window.innerWidth]);
 
   const { cartState } = useCart();
   const [cartCount, setCartCount] = useState(0);
@@ -121,10 +121,30 @@ const Navbar = () => {
   useEffect(() => {
     setCartCount(cartState.cartItems.length); 
   }, [cartState.cartItems]);
+ 
+
+  window.onscroll = function() {
+    const currentScrollPos = window.scrollY;
+    if (currentScrollPos > 50) {
+      setNavbarBackground('black'); 
+    } else {
+      setNavbarBackground('transparent'); 
+    }
+    if (prevScrollpos > currentScrollPos) {
+      setNavbarTop('0');
+      
+    } else {
+      setNavbarTop('-120px');
+      setNavbarBackground('black');
+    }
+    setPrevScrollpos(currentScrollPos);
+  }
+  
 
   return (
+    <>
     <div>
-      <div className='mainNav' style={{ justifyContent: 'space-between' }}>
+      <div className='mainNav' style={{position: 'fixed', top: navbarTop, width: '100%', display: 'block', transition: 'top 0.3s', backgroundColor: navbarBackground}}>
         <nav className={`navbar ${menuOpen ? 'open' : ''}`} style={{ backgroundColor: 'transparent', justifyContent: 'space-between' }}>
           <div className="navbar-left">
             <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
@@ -132,12 +152,12 @@ const Navbar = () => {
               <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
             </button>
             <Link to="/" onClick={closeMenu}>Home</Link>
-            <Link to="/about" onClick={closeMenu}>About</Link>
+            <Link to="/Aboutus" onClick={closeMenu}>About</Link>
             <Link to="/Shop" onClick={closeMenu}>Shop</Link>
-            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+            <Link to="/Contactus" onClick={closeMenu}>Contact</Link>
           </div>
-          <div className="logo">
-            <img src="https://o.remove.bg/downloads/5823f09c-c0d2-4049-828a-44ab3b8548bd/Untitled__2_-removebg-preview.png" alt="Logo" />
+          <div className="logo-container" >
+            <img src={require('../vintage.png')} alt="Logo" style={{width:'367px',height:"230px",}} className="centered-logo"/>
           </div>
           <div className="navbar-right">
             <Link to="/Boutique" className='righ'>Boutiques</Link>
@@ -151,15 +171,18 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
+     
 
-      <BackgroundVideo />
+    <BackgroundVideo/>
       <Products />
       <ContentAdver />
       <Advertise />
       <TopProduct />
+      <PicText/>
       <Boutique />
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 };
 

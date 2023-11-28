@@ -1,9 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import "./EditProduct.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-regular-svg-icons';
+import { addItem } from '../Services/api';
+const EditProduct = () => {
+ 
+    const [formData, setFormData] = useState({
+        name: '',
+        description: '',
+        category:'',
+        type:'',
+        stock:'',
+        available:'',
+        buildyear:'',
+        admprice:"",
+        price: 0,
+        image: '', 
+    });
+  const handleAddItem = async () => {
+    try {
+        await addItem(formData);
 
-export default function EditProduct() {
+        // After adding, fetch the updated data
+        // fetchData();
+    } catch (error) {
+        console.error('Error adding item:', error.message);
+        // Add additional handling based on the error type
+    }
+};
+const handleInputChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
   return (
     <div>
            < div className='cantainer' style={{border:"none" ,backgroundColor:"transparent",display:'grid',overflow:'visible'}}>  
@@ -33,46 +64,35 @@ export default function EditProduct() {
               <div className="media-dropzone cursor-pointer">
       <label htmlFor="fileInput" className="flex flex-col items-center gap-2.5" style={{cursor:"pointer"}}>
       <FontAwesomeIcon icon={faImage} />
-        <span className="subheading-3" style={{color:'white'}} >Browse image</span>
+        <span className="subheading-3" style={{color:'white'}} >
+          Image
+          <div>
+                <label>Image (URL):</label>
+                <input
+                    type="text"
+                    name="image"
+                    onChange={handleInputChange}
+                />
+            </div></span>
       </label>
-      <input accept="image/jpeg,image/png,image/gif,image/bmp,image/webp,image/svg+xml" type="file" id="fileInput" style={{ display: 'none' }}/>
     </div>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+                
               
               </div>  
-              <div className="main-container">  
+              {/* <div className="main-container">  
         <div className="imbo" style={{border:"none"}} >  
                    
 
                        
                         
-                    <div className="media-dropzone cursor-pointer" style={{}}>
+                    <div className="media-dropzone cursor-pointer">
       <label htmlFor="fileInput" className="flex flex-col items-center gap-2.5" style={{cursor:"pointer",color:"white"}}>
       <FontAwesomeIcon icon={faImage} />
         <span className="subheading-3" style={{color:'white'}} >Browse image</span>
       </label>
       <input accept="image/jpeg,image/png,image/gif,image/bmp,image/webp,image/svg+xml" type="file" id="fileInput" style={{ display: 'none' }}/>
     </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                       
+                                     
         </div>  
                           <div style={{height:'20px',width:'10px',border:"none"}}></div>    
         <div className="imbo">  
@@ -86,29 +106,8 @@ export default function EditProduct() {
       <input accept="image/jpeg,image/png,image/gif,image/bmp,image/webp,image/svg+xml" type="file" id="fileInput" style={{ display: 'none' }}/>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>      
-      </div>  
+      </div>   */}
             </div>  
           </div>  
           <div className='items' style={{border:"none"}}>  
@@ -121,21 +120,30 @@ export default function EditProduct() {
 
         </div>  
       
-        <div className="col-md-4 " style={{border:"none"}}>  
-          <label htmlFor="size" className=" field-label" style={{color:'white'}}>Product Name</label>  
-          <input type="text" className="form-control" id="size" />  
-        </div>  
+        <div className="col-md-4" style={{ border: "none" }}>
+  <label htmlFor="productName" className="field-label" style={{ color: 'white' }}>
+    Product Name
+  </label>
+  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                />
+</div>
+
+ 
 
         <div className="col-md-4 "style={{border:"none"}}>   
           <label htmlFor="size" className=" field-label" style={{color:'white'}}>Catagory</label>  
-          <input type="text" className="form-control" id="size" />  
+          <input type="text" className="form-control" id="size" onChange={handleInputChange} value={formData.category} name='category' />  
         </div>  
     
       </div>  
 
 
 
-      <div className="row " style={{width:"830px", height:"130px",border:"none"}}>  
+      {/* <div className="row " style={{width:"830px", height:"130px",border:"none"}}>  
         <div className="col-md-2" style={{border:"none"}}>  
         <div className="col-md-11 offset-md-0.9" style={{border:"none"}}>   
           <label htmlFor="size" className=" field-label" style={{color:'white'}}>Schedule</label>  
@@ -156,13 +164,13 @@ export default function EditProduct() {
           <input type="text" className="form-control" id="size" />  
         </div>  
     
-      </div>  
+      </div>   */}
 
       <div className="row " style={{width:"830px", height:"130px",border:"none"}}>  
         <div className="col-md-2">  
         <div className="col-md-11 offset-md-0.9">   
           <label htmlFor="size" className=" field-label" style={{color:'white'}}>Product Type</label>  
-          <input type="text" className="form-control" id="size" />  
+          <input type="text" className="form-control" id="size" onChange={handleInputChange} value={formData.type} name='type'/>  
         </div>  
 
 
@@ -172,12 +180,12 @@ export default function EditProduct() {
       
         <div className="col-md-4 offset-md-1">  
           <label htmlFor="size" className=" field-label"style={{color:'white'}}>Stock Status</label>  
-          <input type="text" className="form-control" id="size" />  
+          <input type="text" className="form-control" id="size" onChange={handleInputChange} value={formData.stock} name='stock'/>  
         </div>  
 
         <div className="col-md-4 offset-md-0.9">   
           <label htmlFor="size" className=" field-label" style={{color:'white'}}>Available Units</label>  
-          <input type="text" className="form-control" id="size" />  
+          <input type="number" className="form-control" id="size" onChange={handleInputChange} name='available' value={formData.available}/>  
     
       </div>  
         </div>  
@@ -191,15 +199,15 @@ export default function EditProduct() {
            
    
   <label htmlFor="field-label" style={{color:'white'}}>Description box</label>  
-  <textarea name="de" className='description' id="" cols="30" rows="10" style={{backgroundColor:'#354585',resize:"none",height:"150px",width:"800px"}}></textarea>  
+  <textarea name="description" className='description' id="" cols="30" rows="10" style={{ resize:"none",height:"150px",width:"800px"}} onChange={handleInputChange} value={formData.description}  />  
 
           </div>  
 
 
           <div className='items' style={{border:"none"}}>  
           <div className="col-md-11 offset-md-0.9" style={{width:"830px", height:"130px"}}>   
-          <label htmlFor="size" className=" field-label" style={{color:'white'}}>SKU</label>  
-          <input type="text" className="form-control" id="size" />  
+          <label htmlFor="size" className=" field-label" style={{color:'white'}}>Build Year</label>  
+          <input type="number" className="form-control" id="size" onChange={handleInputChange} name='buildyear' value={formData.buildyear} />  
         </div>  
 
 
@@ -211,13 +219,13 @@ export default function EditProduct() {
         </div>  
       
         <div className="col-md-4">  
-          <label htmlFor="size" className=" field-label" style={{color:'white'}}>Zip</label>  
-          <input type="text" className="form-control" id="size" />  
+          <label htmlFor="size" className=" field-label" style={{color:'white'}}>Bought Price</label>  
+          <input type="number" className="form-control" id="size" onChange={handleInputChange} name='admprice' value={formData.admprice}/>  
         </div>  
 
         <div className="col-md-4">   
-          <label htmlFor="size" className=" field-label" style={{color:'white'}}>Zip</label>  
-          <input type="text" className="form-control" id="size" />  
+          <label htmlFor="size" className=" field-label" style={{color:'white'}}>Sales Price</label>  
+          <input type="number" className="form-control" id="size" onChange={handleInputChange} name='price' value={formData.price} />  
         </div>  
     
       </div>  
@@ -225,8 +233,8 @@ export default function EditProduct() {
 
   <div className='sub-button'>  
 
-     <div className='sub-b'> <button type="button" class="btn btn-primary btn-lg">Save To Draft</button></div>  
-     <div className='sub-b'> <button type="button" class="btn btn-primary btn-lg">Publish Product</button></div>  
+     {/* <div className='sub-b'> <button type="button" class="btn btn-primary btn-lg">Save To Draft</button></div>   */}
+     <div className='sub-b'> <button type="button" class="btn btn-primary btn-lg" onClick={handleAddItem}>Publish Product</button></div>  
 </div>
 </div>
 </div>
@@ -235,4 +243,5 @@ export default function EditProduct() {
 
    
   )
-}
+};
+export default EditProduct;

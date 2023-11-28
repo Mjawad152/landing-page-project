@@ -36,9 +36,9 @@ function App() {
     return (
 
       <div>
-      <YourComponent/>
+      {/* <YourComponent/> */}
      
-      {/* <Router>
+      <Router>
        <Routes>
           
           <Route path='/' element={<CustomNavbar/>}/>
@@ -56,7 +56,7 @@ function App() {
           <Route path='/Contactus' element={<ContactUs/>}/>
           <Route path='/Aboutus' element={<Aboutus/>}/>
         </Routes>
-      </Router> */}
+      </Router>
 
 
 

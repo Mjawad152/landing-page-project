@@ -194,7 +194,7 @@ export default function CustomerDetail() {
        {cartState.cartItems.map((item) => (
          <div class="row g-0">
            <div class="col-md-4">
-             <img src={item.imageUrl} class="img-fluid rounded-start"  style={{height:"100%",width:"100%"}}/>
+             <img src={item.image} class="img-fluid rounded-start"  style={{height:"100%",width:"100%"}}/>
            </div>
            <div class="col-md-6" style={{border:"1px solid black"}}>
              <div class="card-body" style={{backgroundColor:"white"}}>

@@ -1,42 +1,34 @@
-// import axios from "axios";
-
-// const url = "http://localhost:5000";
-
-// export const sendMessageViaAxios = async () => {
-//     console.log("axios api reached..");
-//     return await axios.get("http://localhost:5000");
-// }
-// /frontend/src/services/api.js
-// import axios from 'axios';
-
-// const url = 'http://localhost:5000';  
-
-// export const sendMessageViaAxios = async () => {
-//     console.log('axios api reached..');
-//     return await axios.get(`${url}/get-items`);
-// };
-// /frontend/src/services/api.js
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:5000';  // Update with your backend server URL
+const baseURL = 'http://localhost:5000'; // Update this with your server URL
 
-export const addItem = async (itemData) => {
-    try {
-        const response = await axios.post(`${baseUrl}/add-item`, itemData);
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
+const api = axios.create({
+  baseURL: baseURL,
+});
+
+export const addItem = async (formData) => {
+  try {
+    const response = await api.post('/add-item', formData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
 };
 
 export const getItems = async () => {
-    try {
-        const response = await axios.get(`${baseUrl}/get-items`);
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
+  try {
+    const response = await api.get('/get-items');
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
 };
 
-
-
+export const deleteItem = async (itemId) => {
+  try {
+    const response = await api.delete(`/delete-item/${itemId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-regular-svg-icons';
 import EditProduct from './EditProduct';
 import ProductsGrid from './ProductsGrid';
+import UserProducts from "./UserProducts";
 import TopProduct from './TopProduct';
 import { Link, Routes, Route } from 'react-router-dom';
 import Footer from './Footer';
@@ -24,7 +25,7 @@ export default function ProductEdit(props) {
           <div className='dash'>
           <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}><Link class="dropdown-item" to="/AdminDashboard/edit">Edit Product</Link></button>
             <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}><Link class="dropdown-item" to="/AdminDashboard/productgrid">Product Grid</Link></button>
-            <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}>Statistics</button>
+            <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}><Link class="dropdown-item" to="/AdminDashboard/userProducts">Products by User</Link> </button>
             <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}>Reviews</button>
             <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}>Customers</button>
             <button type="button" className="btn btn-primary btn-lg" style={{color:'white'}}>Transaction</button>
@@ -44,8 +45,7 @@ export default function ProductEdit(props) {
         
         {props.type=="edit" &&<EditProduct/>}
         {props.type=="productgrid" &&<ProductsGrid/>}
-       
-        
+        {props.type=="userProducts" &&<UserProducts/> }
 
 
 

@@ -86,7 +86,7 @@ import { useCart } from './CartContext';
 import PicText from './PicText';
 import ReactPlayer from 'react-player';
 import './BackgroundVideo.css'
-
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -160,13 +160,13 @@ const Navbar = () => {
             <img src={require('../vintage.png')} alt="Logo" style={{width:'367px',height:"230px",}} className="centered-logo"/>
           </div>
           <div className="navbar-right">
-            <Link to="/Boutique" className='righ'>Boutiques</Link>
+            <Link to="/Signup" className='righ'>Sign-Up Now</Link>
             <Link to="/yourcart" className='righ' id='shopcart'> <GiShoppingCart/> <span className="badge text-bg-secondary">{cartCount}</span></Link>
             <Link to="/AdminDashboard" className="login-button" style={{ color: 'white', fontSize: '1.5em' }}>
               <RiAdminFill />
             </Link>
-            <Link className='login-button' style={{ color: 'white', fontSize: '1.5em' }}>
-              <FaSearch />
+            <Link className='login-button' to="/UserAdd" style={{ color: 'white', fontSize: '1.5em' }}>
+              <IoMdAddCircleOutline /> 
             </Link>
           </div>
         </nav>

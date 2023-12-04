@@ -1,8 +1,9 @@
 import React, { useState,useEffect } from "react";
 import "./TopProduct.css";
 import { useCart } from "./CartContext";
-import { useTopSellers } from "./TopSellersContext";
+
 import { getItems } from '../Services/api';
+import ProductsForUsers from "./ProductsForUsers";
 
 function TopProduct() {
   const { addToCart } = useCart(); 
@@ -15,12 +16,7 @@ function TopProduct() {
 
 
     const [data, setData] = useState([]);
-    const [formData, setFormData] = useState({
-        name: '',
-        description: '',
-        price: 0,
-        image: '', 
-    });
+  
 
     useEffect(() => {
       
@@ -61,7 +57,7 @@ return (
           <h5 className="card-title">Name: {item.name}</h5>
           <p className="card-text">Description: {item.description}</p>
           <p className="card-text">Price: {item.price}</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+          <a href="#" className="btn btn-primary">view Details</a>
           <button onClick={() => handleAddToCart(item)} style={{ margin: "10px", padding: "5px" }} className="btn btn-danger">
             Add To Cart
           </button>
@@ -71,6 +67,8 @@ return (
         </div>
       </div>
     ))}
+     <h2 className="heading">New Arrival</h2>
+    <ProductsForUsers/>
 
   
   </div>

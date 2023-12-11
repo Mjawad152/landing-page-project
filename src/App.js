@@ -30,6 +30,8 @@ import YourComponent from './Components/YourComponent';
 import Signup from './Components/Signup';
 import UserProducts from './Components/UserProducts';
 import UserAdd from './Components/UserAdd';
+import PracComp from './Components/PracComp';
+import Fpractice from './Components/Fpractice';
 
 
 
@@ -39,11 +41,11 @@ function App() {
     return (
 
       <div>
-      {/* <Signup/> */}
+      <Fpractice/>
 
    
      
-      <Router>
+      {/* <Router>
        <Routes>
           
           <Route path='/' element={<CustomNavbar/>}/>
@@ -62,7 +64,7 @@ function App() {
           <Route path='/Contactus' element={<ContactUs/>}/>
           <Route path='/Aboutus' element={<Aboutus/>}/>
         </Routes>
-      </Router>
+      </Router> */}
 
 
 

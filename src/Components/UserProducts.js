@@ -3,12 +3,7 @@ import { getData, deleteProduct } from '../Services/api';
 
 const ProductsGrid = () => {
     const [data, setData] = useState([]);
-    // const [formData, setFormData] = useState({
-    //     name: '',
-    //     description: '',
-    //     price: 0,
-    //     image: '', 
-    // });
+  
 
     useEffect(() => {
       
@@ -74,7 +69,7 @@ const ProductsGrid = () => {
             <h5 className="card-title">Name: {iteme.productName}</h5>
             <p className="card-text">Description: {iteme.productDescription}</p>
             <p className="card-text">Price: {iteme.productPrice}</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <a href="#" className="btn btn-primary">View Details</a>
             <div className="d-flex" style={{ padding: "10px" }}>
               {/* <button className="btn btn-secondary" style={buttonStyle}>Edit</button> */}
               <button className="btn btn-danger" onClick={() => handleDeleteItem(iteme._id)}>Delete</button>

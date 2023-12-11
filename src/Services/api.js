@@ -70,3 +70,37 @@ export const deleteItem = async (itemId) => {
     throw error;
   }
 };
+
+
+
+
+export const uploadImage = async (formData) => {
+  try {
+    const response = await api.post('/upload-image', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    return response.data.imageUrl;
+  } catch (error) {
+    throw error;
+  }
+};
+// api.js
+
+export const getImageUrl = async () => {
+  try {
+    const response = await api.get('/get-image-url'); // Add this new endpoint to your backend
+    console.log(response.data.imageUrl);
+    return response.data.imageUrl;
+    
+  } catch (error) {
+    throw error;
+  }
+};
+
+
+
+
+
+

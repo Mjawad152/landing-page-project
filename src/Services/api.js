@@ -86,11 +86,11 @@ export const uploadImage = async (formData) => {
     throw error;
   }
 };
-// api.js
+
 
 export const getImageUrl = async () => {
   try {
-    const response = await api.get('/get-image-url'); // Add this new endpoint to your backend
+    const response = await api.get('/get-image-url'); 
     console.log(response.data.imageUrl);
     return response.data.imageUrl;
     
@@ -101,6 +101,14 @@ export const getImageUrl = async () => {
 
 
 
+
+
+
+
+export const addData = async (value) =>{
+  console.log("API REACHED");
+  return await axios.post(`${baseURL}/prac`,value);
+}
 
 
 

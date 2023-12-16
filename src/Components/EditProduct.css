@@ -3,7 +3,7 @@
   
 
 .form-control{
-    background-color: #354585;
+    /* background-color: #354585; */
     height: 44px;
     padding: 0 20px;
     
@@ -18,7 +18,7 @@
 }
 .field-label{
     
-    color: #8D8D99;
+    color: black;
     width: fit-content;
 }
   
@@ -54,7 +54,7 @@ display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #354585;
+    /* background-color: #354585; */
     
 }
 
@@ -76,7 +76,7 @@ display: flex;
     justify-content: center;
     align-items: center;
     /* border: 2px solid black; */
-    background-color: #354585;
+    /* background-color: #354585; */
   }
 
 

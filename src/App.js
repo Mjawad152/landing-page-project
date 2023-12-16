@@ -32,23 +32,27 @@ import UserProducts from './Components/UserProducts';
 import UserAdd from './Components/UserAdd';
 import PracComp from './Components/PracComp';
 import Fpractice from './Components/Fpractice';
+import Admindetails from './Components/Admindetails';
 
+const appStyle = {
+  // marginTop: '120px', 
 
+};
 
 
 
 function App() {
     return (
 
-      <div>
-      <Fpractice/>
-
+      <div style={appStyle}>
+  
+      <Router>  
    
-     
-      {/* <Router>
+     <CustomNavbar/>
        <Routes>
           
-          <Route path='/' element={<CustomNavbar/>}/>
+          <Route path='/' element={<BackgroundVideo/>}/>
+          
           <Route path='/UserAdd' element={<UserAdd/>}/>
           <Route path='/Shop' element={<TopProduct/>}/>
           <Route path='/Contact' element={<Footer/>}/>
@@ -56,6 +60,7 @@ function App() {
           <Route path='/Signup' element={<Signup/>}/>
           <Route path='/AdminDashboard' element={<AdminDashboard />}/>
           <Route path='/AdminDashboard/edit' element={<AdminDashboard type="edit"/>}/>
+          <Route path='/AdminDashboard/Admindetails' element={<AdminDashboard type="Admindetails"/>}/>
           <Route path='/AdminDashboard/productgrid' element={<AdminDashboard type="productgrid"/>}/>
           <Route path='/AdminDashboard/userProducts' element={<AdminDashboard type="userProducts"/>}/>
           <Route path='/Payment' element={<Payment/>}/>
@@ -64,7 +69,8 @@ function App() {
           <Route path='/Contactus' element={<ContactUs/>}/>
           <Route path='/Aboutus' element={<Aboutus/>}/>
         </Routes>
-      </Router> */}
+        <Footer />
+      </Router>
 
 
 

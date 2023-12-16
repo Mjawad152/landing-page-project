@@ -128,7 +128,8 @@ const Navbar = () => {
     if (currentScrollPos > 50) {
       setNavbarBackground('black'); 
     } else {
-      setNavbarBackground('transparent'); 
+      setNavbarBackground('black'); 
+      
     }
     if (prevScrollpos > currentScrollPos) {
       setNavbarTop('0');
@@ -136,6 +137,7 @@ const Navbar = () => {
     } else {
       setNavbarTop('-120px');
       setNavbarBackground('black');
+      
     }
     setPrevScrollpos(currentScrollPos);
   }
@@ -173,15 +175,9 @@ const Navbar = () => {
       </div>
      
 
-    <BackgroundVideo/>
-      <Products />
-      <ContentAdver />
-      <Advertise />
-      <TopProduct />
-      <PicText/>
-      <Boutique />
+   
     </div>
-      <Footer />
+ 
     </>
   );
 };

@@ -3,7 +3,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
   return (
-    <div className="container" style={{gap:"3rem",display:"flex"}}>
+    <div className="container" style={{gap:"3rem",display:"flex",marginTop:"130px"}}>
       <div className="store-details" style={{width:"30%"}}>
         
         <h2 className='contactus' >Contact Us</h2>

@@ -22,7 +22,7 @@ export default function UserAdd() {
 
 
   return (
-    <div>
+    <div style={{marginTop:"130px"}}>
     <div className='col-md-6  mt-4'>
         <form class="row g-3 needs-validation" novalidate onSubmit={handleSubmit}>
         <div >

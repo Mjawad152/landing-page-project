@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import './BackgroundVideo.css'
+import Products from './Carosel';
+import ContentAdver from './ContentAdver';
+import Advertise from './Advertise';
+import TopProduct from './TopProduct';
+import Footer from './Footer';
+import Boutique from '../Boutique';
+import PicText from './PicText';
 const BackgroundVideo = () => {
   return (
     <>
@@ -34,6 +41,13 @@ const BackgroundVideo = () => {
       </div>
     </div>
      
+
+    <Products />
+      <ContentAdver />
+      <Advertise />
+      <TopProduct />
+      <PicText/>
+      <Boutique />
       
       </>
   );

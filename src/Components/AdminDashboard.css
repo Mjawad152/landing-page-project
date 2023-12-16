@@ -9,28 +9,28 @@
       
       .upper-row {
         grid-column: 1 / span 2; 
-        background-color: #3498db;
+        /* background-color: #3498db; */
         color: white;
        
         text-align: center;
       }
       
       .left-column {
-        background-color: #031123;
+        background-color: #c4d5e9;
        
       }
       
       .right-column {
-        background-color: #031123;
+        background-color: #dce4ee;
        
       }
     .form-control{
-        background-color: #354585;
+        /* background-color: #354585; */
         height: 44px;
         padding: 0 20px;
         
         border-radius: 8px;
-        border: 1px solid #354585;
+        /* border: 1px solid #354585; */
         width: 100%;
         transition: .3s ease-in-out;
         text-overflow: ellipsis;
@@ -39,7 +39,7 @@
     }
     .field-label{
         
-        color: #8D8D99;
+        color: black;
         width: fit-content;
     }
       
@@ -49,7 +49,35 @@
 
 
 
-
+    .banner-card {
+      display: flex;
+      max-width: 400px; /* Adjust the maximum width as needed */
+      margin: 20px;
+      border: 1px solid #e2cdcd; /* Optional: Add a border for styling */
+      overflow: hidden;
+      border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    }
+    
+    .banner-image {
+      flex: 1;
+      margin-top: 1.5rem;
+    }
+    
+    .banner-text {
+      flex: 2;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .banner-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 0 0 8px; /* Optional: Adjust border-radius to match the container */
+    }
+    
 
 
     

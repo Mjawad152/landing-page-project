@@ -1,0 +1,30 @@
+
+  
+  .grid-containe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100vh;
+  }
+  
+  .grid-item {
+    box-sizing: border-box;
+    border: 1px solid #000;
+  }
+  
+  .custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px; 
+  }
+  
+  .custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .custom-table th {
+    background-color: #f2f2f2;
+  }
+  

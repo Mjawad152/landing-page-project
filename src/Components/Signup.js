@@ -45,6 +45,7 @@ const onChange=(e)=>{
         backgroundPosition: 'center',
         display: 'flex',
         height: '100vh',
+        marginTop:"130px"
       }}
     >
       
